@@ -3,6 +3,7 @@ from selenium.webdriver import ChromeOptions
 import unittest
 options = ChromeOptions()
 options.add_argument("--no-sandbox")
+browser = Chrome(options=options)
 browser.get('http://localhost:8000')
 
 class NewVisitorTest(unittest.TestCase):
@@ -21,6 +22,7 @@ class NewVisitorTest(unittest.TestCase):
         self.fail('Finish the test!')
         # She types "Buy peacock feathers" into a text box (Edith's hobby
         # is tying fly-fishing lures)
+
 
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
